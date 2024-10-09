@@ -1,0 +1,112 @@
+.container {
+    width: 100%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "Header Header Header Header Header"
+    "Search Search Search Search Search"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content Content Content Content S-Content"
+    "Content1 Content2 Content3 Content4 Content5"
+    "Footer Footer Footer Footer Footer";
+    grid-gap: 20px;
+        
+}
+
+
+.system {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.system.hdr {
+    background-color: rgb(238, 87, 87);
+    grid-area: Header;
+}
+
+.system.src {
+    background-color: rgb(238, 232, 73);
+    grid-area: Search;
+}
+
+.system.ctn {
+    background-color: rgb(251, 161, 77);
+    grid-area: Content;
+}
+
+.system.sctn {
+    background-color: rgb(77, 251, 77);
+    grid-area: S-Content;
+}
+
+.system.ctn1 {
+    background-color: #4682af;
+    grid-area: Content1;
+}
+
+.system.ctn2 {
+    background-color: #e14476;
+    grid-area: Content2;
+}
+
+.system.ctn3 {
+    background-color: #af49f7;
+    grid-area: Content3;
+}
+
+.system.ctn4 {
+    background-color: #48f4af;
+    grid-area: Content4;
+}
+
+.system.ctn5 {
+    background-color: #defb4a;
+    grid-area: Content5;
+}
+
+.system.ftr {
+    background-color: rgb(184, 118, 243);
+    grid-area: Footer;
+}
+
+
+@media (max-width: 500px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "Header"
+        "Search"
+        "Content"
+        "S-Content"
+        "Content1"
+        "Content2"
+        "Content3"
+        "Content4"
+        "Content5"
+        "Footer";
+    }
+}

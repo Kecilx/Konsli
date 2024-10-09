@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Konsli Console</title>
+</head>
+    <body style="background-color: aquamarine;">
+        <script>
+
+            // 1. Inisialisasi Variabel:
+                // Buat variabel jumlah untuk menyimpan jumlah data yang akan diinputkan oleh pengguna.
+            // 2. Input Jumlah Data:
+                // Gunakan prompt untuk meminta pengguna memasukkan jumlah data yang ingin diinputkan, simpan hasilnya di variabel jumlah.
+                let jumlah = prompt("Masukkan jumlah data yang ingin diinputkan : ");
+                // Buat array data[] untuk menyimpan nilai yang dimasukkan oleh pengguna.
+                let data = [];
+                // Buat variabel total, rata, max, dan min dengan nilai awal 0.
+                let total = 0;
+                let rata = 0;
+                let max = 0;
+                let min = 0;
+
+            // 3. Input Data dan Perhitungan:
+
+                // Looping:
+                    // Lakukan iterasi sebanyak jumlah yang telah diinputkan oleh pengguna.
+                    // Pada setiap iterasi:
+                    // Gunakan prompt untuk meminta pengguna memasukkan nilai data, simpan hasilnya di array data[i].
+                    for (let i = 0; i < jumlah; i++) {
+                    data[i] = prompt("Masukkan data ke-" + (i + 1) + " : ");
+                    // Konversikan nilai input menjadi integer, lalu tambahkan ke total.
+                    total += parseInt(data[i]);
+                    // Hitung rata-rata (rata) dengan membagi total dengan jumlah
+                    rata = total / jumlah;
+
+                    // Pada iterasi pertama (i == 0), atur max dan min dengan nilai data[i].
+                    if (i == 0) {
+                        max = data[i];
+                        min = data[i];
+                    } else {
+                        // Pada iterasi berikutnya, periksa apakah nilai saat ini lebih besar dari max. Jika ya, atur max ke nilai saat ini.
+                        if (data[i] > max) {
+                            max = data[i];
+                        }
+                        // Periksa apakah nilai saat ini lebih kecil dari min. Jika ya, atur min ke nilai saat ini.
+                        if (data[i] < min) {
+                                min = data[i];
+                        }
+                    }
+                }
+
+                // 4. Menampilkan Hasil:
+
+                // Tampilkan tabel berisi seluruh nilai yang diinputkan menggunakan console.table.
+                console.table(data);
+                console.table("Total : " + total);
+                console.table("Rata-rata : " + rata);
+                // Tampilkan total nilai, rata-rata, nilai tertinggi (max), dan nilai terendah (min) menggunakan console.table.
+                console.table("Nilai tertinggi : " + max);
+                console.table("Nilai terendah : " + min);
+
+        
+
+
+
+
+        </script>
+    </body>
+</html>

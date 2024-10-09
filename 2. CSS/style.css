@@ -1,0 +1,25 @@
+table {
+    border: 1px solid blueviolet;
+    background-color: aquamarine;
+}
+
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.Jam {
+    width: 5%;
+}
+
+h1 {
+    text-align: center;
+    color: blueviolet;
+}

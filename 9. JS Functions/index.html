@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Konversi</title>
+</head>
+<body style="background-color: bisque;">
+    <script>
+        
+        // Daftar mata uang yang valid
+        const validCurrencies = ["USD", "EUR", "JPY", "IDR"];
+
+        // Konversi Mata Uang
+        let mataUang = prompt("Masukkan mata uang yang ingin dikonversi (USD, EUR, JPY, IDR) : ").toUpperCase();
+        
+        // Validasi mata uang
+        if (!validCurrencies.includes(mataUang)) {
+            console.error("Mata uang tidak valid! Proses dihentikan.");
+            alert("Mata uang tidak valid! Proses dihentikan.");
+        } else {
+            let nilai = prompt("Masukkan nilai mata uang : ");
+            let konversi = prompt("Masukkan konversi yang diinginkan (USD, EUR, JPY, IDR) : ").toUpperCase();
+
+            if (!validCurrencies.includes(konversi)) {
+                console.error("Mata uang konversi tidak valid! Proses dihentikan.");
+                alert("Mata uang konversi tidak valid! Proses dihentikan.");
+            } else {
+                let hasil = 0;
+
+                function konversiMataUang(mataUang, nilai, konversi) {
+                    if (mataUang == "USD") {
+                        if (konversi == "USD") {
+                            hasil = nilai;
+                            console.log("Hasil konversi dari " + nilai + " USD ke USD adalah " + hasil + " USD");
+                        } else if (konversi == "EUR") {
+                            hasil = nilai * 0.85;
+                            console.log("Hasil konversi dari " + nilai + " USD ke EUR adalah " + hasil + " EUR");
+                        } else if (konversi == "JPY") {
+                            hasil = nilai * 110.22;
+                            console.log("Hasil konversi dari " + nilai + " USD ke JPY adalah " + hasil + " JPY");
+                        } else if (konversi == "IDR") {
+                            hasil = nilai * 14425.00;
+                            console.log("Hasil konversi dari " + nilai + " USD ke IDR adalah " + hasil + " IDR");
+                        }
+                    } else if (mataUang == "EUR") {
+                        if (konversi == "USD") {
+                            hasil = nilai * 1.18;
+                            console.log("Hasil konversi dari " + nilai + " EUR ke USD adalah " + hasil + " USD");
+                        } else if (konversi == "EUR") {
+                            hasil = nilai;
+                            console.log("Hasil konversi dari " + nilai + " EUR ke EUR adalah " + hasil + " EUR");
+                        } else if (konversi == "JPY") {
+                            hasil = nilai * 130.91;
+                            console.log("Hasil konversi dari " + nilai + " EUR ke JPY adalah " + hasil + " JPY");
+                        } else if (konversi == "IDR") {
+                            hasil = nilai * 17125.00;
+                            console.log("Hasil konversi dari " + nilai + " EUR ke IDR adalah " + hasil + " IDR");
+                        }
+                    } else if (mataUang == "JPY") {
+                        if (konversi == "USD") {
+                            hasil = nilai * 0.0091;
+                            console.log("Hasil konversi dari " + nilai + " JPY ke USD adalah " + hasil + " USD");
+                        } else if (konversi == "EUR") {
+                            hasil = nilai * 0.0076;
+                            console.log("Hasil konversi dari " + nilai + " JPY ke EUR adalah " + hasil + " EUR");
+                        } else if (konversi == "JPY") {
+                            hasil = nilai;
+                            console.log("Hasil konversi dari " + nilai + " JPY ke JPY adalah " + hasil + " JPY");
+                        } else if (konversi == "IDR") {
+                            hasil = nilai * 130.91;
+                            console.log("Hasil konversi dari " + nilai + " JPY ke IDR adalah " + hasil + " IDR");
+                        }
+                    } else if (mataUang == "IDR") {
+                        if (konversi == "USD") {
+                            hasil = nilai * 0.000069;
+                            console.log("Hasil konversi dari " + nilai + " IDR ke USD adalah " + hasil + " USD");
+                        } else if (konversi == "EUR") {
+                            hasil = nilai * 0.000058;
+                            console.log("Hasil konversi dari " + nilai + " IDR ke EUR adalah " + hasil + " EUR");
+                        } else if (konversi == "JPY") {
+                            hasil = nilai * 0.0076;
+                            console.log("Hasil konversi dari " + nilai + " IDR ke JPY adalah " + hasil + " JPY");
+                        } else if (konversi == "IDR") {
+                            hasil = nilai;
+                            console.log("Hasil konversi dari " + nilai + " IDR ke IDR adalah " + hasil + " IDR");
+                        }
+                    }   
+                }
+
+                konversiMataUang(mataUang, nilai, konversi);
+                console.info("Konversi mata uang selesai");
+            }
+        }
+    </script>
+</body>
+</html>

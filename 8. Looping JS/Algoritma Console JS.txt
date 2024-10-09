@@ -1,0 +1,26 @@
+Berikut adalah algoritma untuk kode JavaScript di atas:
+
+### Algoritma:
+
+1. **Inisialisasi Variabel**:
+   - Buat variabel `jumlah` untuk menyimpan jumlah data yang akan diinputkan oleh pengguna.
+   - Buat array `data[]` untuk menyimpan nilai yang dimasukkan oleh pengguna.
+   - Buat variabel `total`, `rata`, `max`, dan `min` dengan nilai awal 0.
+
+2. **Input Jumlah Data**:
+   - Gunakan `prompt` untuk meminta pengguna memasukkan jumlah data yang ingin diinputkan, simpan hasilnya di variabel `jumlah`.
+
+3. **Input Data dan Perhitungan**:
+   - **Looping**:
+     - Lakukan iterasi sebanyak `jumlah` yang telah diinputkan oleh pengguna.
+     - Pada setiap iterasi:
+       1. Gunakan `prompt` untuk meminta pengguna memasukkan nilai data, simpan hasilnya di array `data[i]`.
+       2. Konversikan nilai input menjadi integer, lalu tambahkan ke `total`.
+       3. Hitung rata-rata (`rata`) dengan membagi `total` dengan `jumlah`.
+       4. Pada iterasi pertama (`i == 0`), atur `max` dan `min` dengan nilai `data[i]`.
+       5. Pada iterasi berikutnya, periksa apakah nilai saat ini lebih besar dari `max`. Jika ya, atur `max` ke nilai saat ini.
+       6. Periksa apakah nilai saat ini lebih kecil dari `min`. Jika ya, atur `min` ke nilai saat ini.
+
+4. **Menampilkan Hasil**:
+   - Tampilkan tabel berisi seluruh nilai yang diinputkan menggunakan `console.table`.
+   - Tampilkan total nilai, rata-rata, nilai tertinggi (`max`), dan nilai terendah (`min`) menggunakan `console.table`.
